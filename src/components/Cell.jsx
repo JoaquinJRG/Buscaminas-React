@@ -30,12 +30,12 @@ export function Cell({children, setGameOver, newCover, coverMatrix ,setCoverMatr
   }
 
   return (
-    <div className="flex justify-center items-center bg-white border border-gray-300 rounded-md w-10 h-10 select-none text-2xl">
+    <div className="flex justify-center items-center bg-white border border-gray-300 rounded-md w-9 h-9 md:w-11 md:h-11 lg:w-12 lg:h-12 select-none text-2xl">
       {newCover && 
       <div 
         onContextMenu={addFlag} 
         onClick={handleClick} 
-        className="flex justify-center items-center bg-gray-300 w-10 h-10 z-10 rounded-md absolute cursor-pointer hover:bg-gray-400">
+        className="flex justify-center items-center bg-gray-300 w-9 h-9 md:w-11 md:h-11 lg:w-12 lg:h-12 z-10 rounded-md absolute cursor-pointer hover:bg-gray-400">
         {flag}
       </div>}
       <span className="text-2xl" style={{color: addColor(children)}}>{children === 0 ? "" : children}</span>
